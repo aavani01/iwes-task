@@ -1,0 +1,51 @@
+<div class="dashboard">
+
+    <header class="dashboard__header">
+        <h1>IWES Wind Farm Monitor</h1>
+        <p>Offshore turbine status dashboard — UI Component Library Demo</p>
+    </header>
+
+    <!-- TURBINE CARDS -->
+    <section class="dashboard__section">
+        <h2>Turbine Status</h2>
+        <div class="dashboard__cards">
+            @for (turbine of turbines; track turbine.id) {
+            <div class="turbine-wrapper">
+                <span class="status-badge status-badge--{{ turbine.status }}">
+                    {{ turbine.status }}
+                </span>
+                <lib-card [title]="turbine.title" [content]="turbine.content" [clickable]="true"
+                    (cardClicked)="onCardClick(turbine.id)"></lib-card>
+            </div>
+            }
+        </div>
+    </section>
+
+    <!-- BUTTONS -->
+    <section class="dashboard__section">
+        <h2>Actions</h2>
+        <div class="dashboard__actions">
+
+            <!-- Disabled UNTIL a turbine is selected -->
+            <lib-button label="Start Inspection" variant="primary" [disabled]="noTurbineSelected"
+                (clicked)="onStartInspection()"></lib-button>
+
+            <!-- Disabled UNTIL a turbine is selected -->    
+            <lib-button label="Export Report" variant="secondary" [disabled]="noTurbineSelected"
+                (clicked)="onExportReport()"></lib-button>
+
+            <!-- Disabled AFTER a turbine is selected (reset) -->
+            <lib-button label="Clear Selection" variant="secondary" [disabled]="noTurbineSelected"
+                (clicked)="onResetSelection()"></lib-button>
+
+        </div>
+    </section>
+
+    <!-- FEEDBACK -->
+    @if (lastAction) {
+    <div class="dashboard__feedback">
+         {{ lastAction }}
+    </div>
+    }
+
+</div>

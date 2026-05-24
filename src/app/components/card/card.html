@@ -1,0 +1,9 @@
+<div
+  class="lib-card"
+  [class.lib-card--clickable]="clickable"
+  (click)="handleClick()"
+>
+  <h3 class="lib-card__title">{{ title }}</h3>
+  <p class="lib-card__content">{{ content }}</p>
+  <ng-content></ng-content>
+</div>
