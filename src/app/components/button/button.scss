@@ -8,17 +8,17 @@
   transition: all 0.2s ease;
 
   &--primary {
-    background-color: #1a6b3c;
+    background-color: var(--color-primary);
     color: white;
-    border-color: #1a6b3c;
-    &:hover:not(:disabled) { background-color: #145230; }
+    border-color: var(--color-primary-dark);
+    &:hover:not(:disabled) { background-color: var(--color-primary-dark); }
   }
 
   &--secondary {
     background-color: transparent;
-    color: #1a6b3c;
-    border-color: #1a6b3c;
-    &:hover:not(:disabled) { background-color: #e8f5ee; }
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    &:hover:not(:disabled) { background-color: var(--color-primary-light); }
   }
 
   &:disabled {

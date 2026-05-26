@@ -1,8 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
+  /* Primary brand colour */
   --color-primary: #1a6b3c;
   --color-primary-dark: #145230;
   --color-primary-light: #e8f5ee;
+
+  /* Surface and borders */
+  --color-surface: #ffffff;
+  --color-border: #e0e0e0;
+
+  /* Text */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #555555;
+
+  /* Status badges */
+  --color-status-online-bg: #d4edda;
+  --color-status-online-text: #155724;
+  --color-status-maintenance-bg: #fff3cd;
+  --color-status-maintenance-text: #856404;
+  --color-status-offline-bg: #f8d7da;
+  --color-status-offline-text: #721c24;
 }
 
 *, *::before, *::after { box-sizing: border-box; }

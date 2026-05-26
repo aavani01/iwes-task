@@ -5,13 +5,13 @@
   font-family: system-ui, sans-serif;
 
   &__header {
-    border-bottom: 2px solid #1a6b3c;
+    border-bottom: 2px solid var(--color-primary);
     padding-bottom: 1rem;
     margin-bottom: 2rem;
 
     h1 {
       margin: 0 0 0.25rem;
-      color: #1a6b3c;
+      color: var(--color-primary);
       font-size: 1.6rem;
     }
 
@@ -48,11 +48,11 @@
   &__feedback {
     margin-top: 1rem;
     padding: 0.75rem 1rem;
-    background: #e8f5ee;
-    border-left: 3px solid #1a6b3c;
+    background: var(--color-primary-light);
+    border-left: 3px solid var(--color-primary);
     border-radius: 4px;
     font-size: 0.875rem;
-    color: #1a6b3c;
+    color: var(--color-primary);
   }
 }
 
@@ -72,17 +72,17 @@
   z-index: 1;
 
   &--online {
-    background: #d4edda;
-    color: #155724;
+    background: var(--color-status-online-bg);
+    color: var(--color-status-online-text);
   }
 
   &--maintenance {
-    background: #fff3cd;
-    color: #856404;
+    background: var(--color-status-maintenance-bg);
+    color: var(--color-status-maintenance-text);
   }
 
   &--offline {
-    background: #f8d7da;
-    color: #721c24;
+    background: var(--color-status-offline-bg);
+    color: var(--color-status-offline-text);
   }
 }

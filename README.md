@@ -78,6 +78,6 @@ src/app/
 
 ## Technologies
 
-- Angular 19
+- Angular 21
 - TypeScript
 - SCSS
